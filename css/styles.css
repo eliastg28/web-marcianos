@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #ffdead;
+    padding: 15px;
+}
+
+header img {
+    height: auto;
+    margin: 0 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border-right: 1px solid #ccc;
+}
+
+.nav a:hover {
+    background-color: #ddd;
+}
+
+.nav a:last-child {
+    border-right: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+img.rounded-img {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el menú hamburguesa en vista móvil */
+.menu-icon {
+    display: none; /* Ocultar el ícono del menú por defecto */
+    height: auto; width: 35px; 
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        display: none; /* Ocultar el menú por defecto en vista móvil */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav a {
+        border: none; /* Quitar los bordes del enlace */
+        padding: 15px 0; /* Aumentar el espacio vertical para hacer clic más fácilmente */
+        display: block; /* Mostrar los enlaces uno debajo del otro */
+    }
+
+    .menu-icon {
+        display: block; /* Mostrar el ícono del menú en vista móvil */
+        cursor: pointer;
+    }
+}
